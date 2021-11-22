@@ -1,0 +1,176 @@
+
+:root{
+ --clr-balck:hsl(0,7%,6%);
+ --clr-white:hsl(0,16%,92%);
+ --clr-green:hsl(128,92%,46%);
+
+ --clr-red:hsl(9,70%,48%);
+ --clr-blue:hsl(247,54%,46%);
+
+
+
+}
+
+
+
+*,*::after,
+*::before{
+
+ box-sizing: border-box;
+
+}
+ body
+ {
+
+
+  /* display: grid;
+  place-items: center; */
+  display: flex;
+flex-wrap: wrap;
+ row-gap: 40px;
+ column-gap: 20px;
+   min-height: 400px;
+    background-color: var(--clr-balck);
+
+      line-height: 1.5rm;
+ 
+
+
+ }
+
+ .card{
+
+  background-image: url(https://tse1.mm.bing.net/th?id=OIP.J1tm-c68OG0P9tIxyaK1EQHaEd&pid=Api&P=0&w=300&h=182);
+ background-size: cover;
+ /* padding:10rm 0 0; */
+  padding: 10rm 0 0;
+    max-width: 350px;
+    min-height: 400px;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 500ms ease;
+ }
+ .title{
+
+ color: var(--clr-white);
+
+ }
+ .content-body{
+ color: var(--clr-white);
+
+
+
+ }
+ .card-content{
+
+ padding-right: 2rem;
+ padding-left: .9rem;
+ margin-top: 15rem;
+ 
+ background:linear-gradient(
+    hsl(10,54%,46%),
+    hsl(229,54%,46%),
+    hsl(121,54%,46%)
+
+
+ );
+    /* hsl(10,13%,9%)); */
+
+ }
+
+ .title::after{
+    --padding:1rm;
+  content: "";
+   position:absolute;
+   width: 100%;
+height: 2px;
+ left:0;
+ bottom:0;
+background: var(--clr-green);
+transform: scalex(0);
+transform-origin: left;
+transition: transform 500ms ease-in;
+ }
+.title{
+
+
+    position: relative;
+    width: max-content;
+    
+
+}
+.button{
+  cursor: pointer;
+   display: inline-block; 
+   color: aliceblue;
+   background-color: var(--clr-green);
+   margin-bottom: 5px;
+   padding: .6rem .5rem;
+   text-decoration: none;
+   border-radius: .5em;
+}
+ .button-two{
+     
+    
+ 
+
+       margin-left: 1rem; 
+
+ }
+.button:hover,.button:focus{
+
+    outline: 2px solid var(--clr-blue) ;
+
+
+}
+.card:hover {
+
+  transform: scale(1.05);
+ cursor: pointer;
+
+
+}
+.card:hover .title::after{
+
+    transform: scaleX(1);
+
+
+}
+.card-contentd{
+   padding-right: 2rem;
+ padding-left: .9rem;
+ margin-top: 15rem;
+ 
+ background:linear-gradient(
+    hsl(10,54%,46%),
+    hsl(229,54%,46%),
+    hsl(121,54%,46%)
+
+
+ );
+ transform: translateY(60%);
+ transform-origin: right;
+ transition: transform 700ms ease;
+ 
+
+
+}
+.card-contentd >*:not(.title){
+
+ opacity: 0;
+ transition: transform 500ms linear;
+ /* opacity: 0; */
+
+}
+.card:hover .card-contentd{
+
+ 
+transform: translateY(0);
+transition-delay: 4000ms;
+}
+.card:hover .card-contentd >*{
+
+  opacity: 1;
+  transition-delay: 2000ms;
+
+}
